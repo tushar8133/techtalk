@@ -12,6 +12,6 @@ export class BBBBComponent implements OnInit {
   ngOnInit() {}
 
   continue() {
-    this.router.navigateByUrl('AAAA/BBBB/CCCC');
+    this.router.navigateByUrl('CCCC');
   }
 }

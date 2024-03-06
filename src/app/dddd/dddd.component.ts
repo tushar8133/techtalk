@@ -15,18 +15,7 @@ export class DDDDComponent implements OnInit {
     this.appService.hitLaunches().subscribe((data) => {
       console.log(data);
     });
-    // request(
-    //   'https://main--spacex-l4uc6p.apollographos.net/graphql',
-    //   this.queryLanches
-    // ).then((data) => console.log(data));
-    // request(
-    //   'https://main--spacex-l4uc6p.apollographos.net/graphql',
-    //   this.queryShips
-    // ).then((data) => console.log(data));
-    // request(
-    //   'https://main--spacex-l4uc6p.apollographos.net/graphql',
-    //   this.queryDragons
-    // ).then((data) => console.log(data));
+    this.appService.posts().subscribe(data => console.log(data));
   }
 
   continue() {

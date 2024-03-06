@@ -12,6 +12,6 @@ export class CCCCComponent implements OnInit {
   ngOnInit() {}
 
   continue() {
-    this.router.navigateByUrl('AAAA/BBBB/CCCC/DDDD');
+    this.router.navigateByUrl('DDDD');
   }
 }

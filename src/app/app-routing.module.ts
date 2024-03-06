@@ -8,10 +8,10 @@ import { DDDDComponent } from './dddd/dddd.component';
 const routes: Routes = [
   { path: '', redirectTo: '/AAAA', pathMatch: 'full' },
   { path: 'AAAA', component: AAAAComponent },
-  { path: 'AAAA/BBBB', component: BBBBComponent },
-  { path: 'AAAA/BBBB/CCCC', component: CCCCComponent },
-  { path: 'AAAA/BBBB/CCCC/DDDD', component: DDDDComponent },
-  { path: '**', component: AAAAComponent },
+  { path: 'BBBB', component: BBBBComponent },
+  { path: 'CCCC', component: CCCCComponent },
+  { path: 'DDDD', component: DDDDComponent },
+  { path: '**', redirectTo: '/' },
 ];
 
 @NgModule({

@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { request, gql } from 'graphql-request';
 import { from, of } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { HttpClient } from "@angular/common/http";
+
 
 @Injectable()
 export class AppService {
@@ -44,13 +47,16 @@ export class AppService {
   }
   `;
 
-  constructor() {}
+  constructor(
+    private httpClient: HttpClient
+  ) {}
 
   hitLaunches() {
-    const resp = request(
-      'https://main--spacex-l4uc6p.apollographos.net/graphql',
-      this.queryLaunches
-    );
+    const resp = request(environment.graphqlDomain, this.queryLaunches);
     return from(resp);
+  }
+
+  posts() {
+    return this.httpClient.get(`${environment.apiDomain}/posts`);
   }
 }

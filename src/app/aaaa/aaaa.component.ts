@@ -12,6 +12,6 @@ export class AAAAComponent implements OnInit {
   ngOnInit() {}
 
   continue() {
-    this.router.navigateByUrl('AAAA/BBBB');
+    this.router.navigateByUrl('BBBB');
   }
 }
