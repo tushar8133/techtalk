@@ -18,10 +18,10 @@ import { Test2Component } from './test2/test2.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    Test1Component,
     LoaderComponent,
+    Test1Component,
     Test2Component,
-  ],
+      ],
   imports: [
     BrowserModule,
     CommonModule,
