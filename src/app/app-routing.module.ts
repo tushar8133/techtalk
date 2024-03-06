@@ -5,6 +5,7 @@ import { BBBBComponent } from './bbbb/bbbb.component';
 import { CCCCComponent } from './cccc/cccc.component';
 import { DDDDComponent } from './dddd/dddd.component';
 import { Test1Component } from './test1/test1.component';
+import { Test2Component } from './test2/test2.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/AAAA', pathMatch: 'full' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'CCCC', component: CCCCComponent },
   { path: 'DDDD', component: DDDDComponent },
   { path: 'test1', component: Test1Component },
+  { path: 'test2', component: Test2Component },
   { path: '**', redirectTo: '/' },
 ];
 

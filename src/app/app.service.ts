@@ -9,11 +9,11 @@ import { HttpClient } from "@angular/common/http";
 export class AppService {
 
   loader$ = new BehaviorSubject(false);
-  counter$ = new BehaviorSubject(0);
-  counter = 0;
+  private counter$ = new BehaviorSubject(0);
+  private counter = 0;
 
 
-  queryDragons = gql`
+  private queryDragons = gql`
     query Dragons {
       dragons {
         name
@@ -28,7 +28,7 @@ export class AppService {
     }
   `;
 
-  queryShips = gql`
+  private queryShips = gql`
   query Ships {
     ships {
       model
@@ -39,7 +39,7 @@ export class AppService {
   }
   `;
 
-  queryLaunches = gql`
+  private queryLaunches = gql`
   query Launches {
     launches {
       id
@@ -66,11 +66,11 @@ export class AppService {
     })
   }
 
-  counterPlus() {
+  private counterPlus() {
     this.counter$.next(++this.counter);
   }
   
-  counterMinus() {
+  private counterMinus() {
     this.counter$.next(--this.counter);
   }
 

@@ -19,16 +19,20 @@ p {
 }
 
 router-outlet + * {
-  display: block;
-  text-align: center;
-  margin: 100px 0px;
+  display: flex;
+  flex-direction: column;
   font-size: 30px;
+  margin: 0 10%;
+  height: 89%;
+  // outline: 2px solid red;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .btn-continue {
   font-size: 30px;
   padding: 10px;
-  margin: 30px;
+  // margin: 30px;
 }
 
 .loader {
@@ -54,5 +58,44 @@ router-outlet + * {
 
   img {
     filter: drop-shadow(5px 5px 1px gray);
+  }
+}
+
+.holder-center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-btn-bottom {
+  text-align: right;
+  border: 3px ridge #b3b3b3;
+  padding: 10px;
+  background: #08365A;
+  width: 100%;
+}
+
+.breadcrumb {
+  // background-color: blue;
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  // margin: 10% 0;
+  li {
+    // background-color: red;
+    width: 100%;
+    border: 3px ridge #b3b3b3;
+    list-style-type: none;
+    padding: 20px;
+    text-align: center;
+    background-color: #08365A;
+    color: white;
+  }
+
+  .selected {
+    background-color: #FEE600;
+    color: black;
+    font-weight: bold;
   }
 }

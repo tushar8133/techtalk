@@ -11,6 +11,7 @@ import { Test1Component } from './test1/test1.component';
 import { LoaderComponent } from './loader/loader.component';
 import { AppInterceptor } from './app.interceptor';
 import { CommonModule } from '@angular/common';
+import { Test2Component } from './test2/test2.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CommonModule } from '@angular/common';
     FooterComponent,
     Test1Component,
     LoaderComponent,
+    Test2Component,
   ],
   imports: [
     BrowserModule,

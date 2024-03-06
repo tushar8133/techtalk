@@ -1,0 +1,24 @@
+<!-- <button (click)="addMore()">ADD</button> -->
+<!-- <button (click)="removeAll()">REMOVE</button> -->
+
+<div class="holder-center">
+    
+    <div class="breadcrumb">
+     <li class="selected">Step 1</li>
+     <li [ngClass]="{'selected': counter > 1 }">Step 2</li>
+     <li [ngClass]="{'selected': counter > 2 }">Step 3</li>
+     <li [ngClass]="{'selected': counter > 3 }">Step 4</li>
+    </div>
+
+</div>
+
+
+<ng-container #holder></ng-container>
+
+<div class="holder-center">
+
+    <div class="nav-btn-bottom">
+        <button class="btn-continue" (click)="continue()">Continue</button>
+    </div>
+
+</div>
