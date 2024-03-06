@@ -74,9 +74,21 @@ export class AppService {
     this.counter$.next(--this.counter);
   }
 
-  hitLaunches() {
+  launches() {
     this.counterPlus();
     const resp = request(environment.graphqlDomain, this.queryLaunches);
+    return from(resp).pipe(tap(() => this.counterMinus()));
+  }
+
+  ships() {
+    this.counterPlus();
+    const resp = request(environment.graphqlDomain, this.queryShips);
+    return from(resp).pipe(tap(() => this.counterMinus()));
+  }
+
+  dragons() {
+    this.counterPlus();
+    const resp = request(environment.graphqlDomain, this.queryDragons);
     return from(resp).pipe(tap(() => this.counterMinus()));
   }
 
@@ -85,6 +97,30 @@ export class AppService {
     return this.httpClient.get(`${environment.apiDomain}/posts`).pipe(tap(() => this.counterMinus()));
   }
 
-  
+  comments() {
+    this.counterPlus();
+    return this.httpClient.get(`${environment.apiDomain}/comments`).pipe(tap(() => this.counterMinus()));
+  }
+
+  albums() {
+    this.counterPlus();
+    return this.httpClient.get(`${environment.apiDomain}/albums`).pipe(tap(() => this.counterMinus()));
+  }
+
+  photos() {
+    this.counterPlus();
+    return this.httpClient.get(`${environment.apiDomain}/photos`).pipe(tap(() => this.counterMinus()));
+  }
+
+  todos() {
+    this.counterPlus();
+    return this.httpClient.get(`${environment.apiDomain}/todos`).pipe(tap(() => this.counterMinus()));
+  }
+
+  users() {
+    this.counterPlus();
+    return this.httpClient.get(`${environment.apiDomain}/users`).pipe(tap(() => this.counterMinus()));
+  }
+
 
 }
