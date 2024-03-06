@@ -4,11 +4,11 @@ import { AppService } from '../app.service';
 import { switchMap } from 'rxjs';
 
 @Component({
-  selector: 'app-cccc',
-  templateUrl: './cccc.component.html',
-  styleUrls: ['./cccc.component.css'],
+  selector: 'app-page2',
+  templateUrl: './page2.component.html',
+  styleUrls: ['./page2.component.scss'],
 })
-export class CCCCComponent implements OnInit {
+export class Page2Component implements OnInit {
   imagePath = environment.imagesDomain;
 
   constructor(private appService: AppService) {}

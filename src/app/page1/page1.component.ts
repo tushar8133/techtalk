@@ -6,11 +6,11 @@ import { forkJoin, switchMap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: 'app-dddd',
-  templateUrl: './dddd.component.html',
-  styleUrls: ['./dddd.component.css'],
+  selector: 'app-page1',
+  templateUrl: './page1.component.html',
+  styleUrls: ['./page1.component.scss'],
 })
-export class DDDDComponent implements OnInit {
+export class Page1Component implements OnInit {
   imagePath = environment.imagesDomain;
 
   constructor(private router: Router, private appService: AppService) {}
@@ -34,7 +34,4 @@ export class DDDDComponent implements OnInit {
     })
   }
 
-  continue() {
-    this.router.navigateByUrl('AAAA');
-  }
 }

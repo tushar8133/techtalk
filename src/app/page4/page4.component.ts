@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { Router } from '@angular/router';
+import { request, gql } from 'graphql-request';
 import { AppService } from '../app.service';
-import { switchMap } from 'rxjs';
+import { forkJoin, switchMap } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: 'app-bbbb',
-  templateUrl: './bbbb.component.html',
-  styleUrls: ['./bbbb.component.css'],
+  selector: 'app-page4',
+  templateUrl: './page4.component.html',
+  styleUrls: ['./page4.component.scss'],
 })
-export class BBBBComponent implements OnInit {
+export class Page4Component implements OnInit {
   imagePath = environment.imagesDomain;
 
-  constructor(private appService: AppService) {}
+  constructor(private router: Router, private appService: AppService) {}
 
   ngOnInit() {
     this.hitAllApis();
@@ -30,5 +32,9 @@ export class BBBBComponent implements OnInit {
     ).subscribe((data) => {
       console.log(data);
     })
+  }
+
+  continue() {
+    this.router.navigateByUrl('AAAA');
   }
 }
