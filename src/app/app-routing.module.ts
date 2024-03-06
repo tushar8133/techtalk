@@ -8,7 +8,7 @@ import { Test1Component } from './test1/test1.component';
 import { Test2Component } from './test2/test2.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/AAAA', pathMatch: 'full' },
+  { path: '', redirectTo: '/test2', pathMatch: 'full' },
   { path: 'AAAA', component: AAAAComponent },
   { path: 'BBBB', component: BBBBComponent },
   { path: 'CCCC', component: CCCCComponent },

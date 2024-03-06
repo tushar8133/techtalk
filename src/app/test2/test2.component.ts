@@ -3,6 +3,7 @@ import { AAAAComponent } from '../aaaa/aaaa.component';
 import { BBBBComponent } from '../bbbb/bbbb.component';
 import { CCCCComponent } from '../cccc/cccc.component';
 import { DDDDComponent } from '../dddd/dddd.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-test2',
@@ -16,7 +17,7 @@ export class Test2Component implements OnInit {
 
   counter = 0;
 
-  constructor() {}
+  constructor(private router: Router) {}
   
   ngOnInit(): void {
   }
@@ -41,7 +42,7 @@ export class Test2Component implements OnInit {
       case 2: this.vcr.createComponent(BBBBComponent); break;
       case 3: this.vcr.createComponent(CCCCComponent); break;
       case 4: this.vcr.createComponent(DDDDComponent); break;
-      default: this.counter = 0;
+      default: this.router.navigateByUrl('test1');
     }
 
   }

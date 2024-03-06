@@ -35,6 +35,6 @@ export class Test1Component implements OnInit {
   }
 
   continue() {
-    this.router.navigateByUrl('AAAA');
+    this.router.navigateByUrl('test2');
   }
 }
