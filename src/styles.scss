@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  padding: 0;
+  margin: 10px 0;
+  display: block;
+}
+
+router-outlet + * {
+  display: block;
+  text-align: center;
+  margin: 100px 0px;
+  font-size: 30px;
+}
+
+.btn-continue {
+  font-size: 30px;
+  padding: 10px;
+  margin: 30px;
+}

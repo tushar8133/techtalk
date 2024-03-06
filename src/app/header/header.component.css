@@ -1,0 +1,8 @@
+:host {
+  background-color: #333333;
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  color: #999999;
+}
