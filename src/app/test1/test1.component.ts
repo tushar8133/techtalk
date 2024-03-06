@@ -11,6 +11,9 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./test1.component.scss']
 })
 export class Test1Component implements OnInit {
+
+  flag = false;
+
   imagePath = environment.imagesDomain;
 
   constructor(private router: Router, private appService: AppService) {}
@@ -27,10 +30,11 @@ export class Test1Component implements OnInit {
       switchMap(() => this.appService.comments()),
       switchMap(() => this.appService.albums()),
       switchMap(() => this.appService.photos()),
-      switchMap(() => this.appService.todos()),
       switchMap(() => this.appService.users()),
+      switchMap(() => this.appService.todos()),
     ).subscribe((data) => {
-      console.log(data);
+      // console.log(data);
+      this.flag = data[0].completed;
     })
   }
 

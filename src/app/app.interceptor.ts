@@ -19,7 +19,7 @@ export class AppInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
 
 
-    console.log("AA", this.counter, request.url);
+    // console.log("AA", this.counter, request.url);
     this.appService.loader$.next(true);
     const response = next.handle(request).pipe(
 
@@ -29,9 +29,9 @@ export class AppInterceptor implements HttpInterceptor {
       }),
       finalize(() => {
           this.counter--;
-          console.log("BB", this.counter);
+          // console.log("BB", this.counter);
           if(this.counter <= 0) {
-            console.log("ZZ", this.counter);
+            // console.log("ZZ", this.counter);
             this.appService.loader$.next(false);
         }
       })

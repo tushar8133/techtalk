@@ -28,7 +28,7 @@ export class Page2Component implements OnInit {
       switchMap(() => this.appService.todos()),
       switchMap(() => this.appService.users()),
     ).subscribe((data) => {
-      console.log(data);
+      // console.log(data);
     })
   }
 }
