@@ -7,12 +7,14 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AppService } from './app.service';
 import { HttpClientModule } from '@angular/common/http';
+import { Test1Component } from './test1/test1.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    Test1Component,
   ],
   imports: [
     BrowserModule,
