@@ -42,3 +42,17 @@ router-outlet + * {
   border: 0;
   outline: 0;
 }
+
+.gallery {
+  display: flex;
+  outline: 3px ridge #b3b3b3;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 4%;
+  padding: 10px;
+
+  img {
+    filter: drop-shadow(5px 5px 1px gray);
+  }
+}
