@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AppService } from './app.service';
 import { HttpClientModule } from '@angular/common/http';
 import { Test1Component } from './test1/test1.component';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { Test1Component } from './test1/test1.component';
     HeaderComponent,
     FooterComponent,
     Test1Component,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
